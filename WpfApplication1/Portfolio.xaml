@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApplication1.Portfolio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Portfolio" Height="317" Width="509">
+    <Grid Margin="0,0,-8,0">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FFEEEEEE" Offset="1"/>
+                <GradientStop Color="#FFE43939" Offset="0.167"/>
+                <GradientStop Color="#FFFFD800" Offset="0.5"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Current Balance :    $" Margin="10,10,344,232" FontSize="12" FontFamily="Segoe Print">
+        </Label>
+        <Label Content="Unrealized Balance : $" Margin="10,43,344,199" FontSize="12" FontFamily="Segoe Print">
+        </Label>
+        <Button Content="Cancel" Click="Cancel_Clicked" Style="{StaticResource buttonStyle}" Margin="320,233,94,10" Width="Auto" Height="Auto">
+        </Button>
+        <Button Content="Sell" Click="Sell_Clicked" Style="{StaticResource buttonStyle}" Margin="105,233,314,10" RenderTransformOrigin="0.5,0.125" Width="Auto" Height="Auto">
+        </Button>
+        <TextBox Name="CurrentBlance_Box" FontFamily="Segoe Print" Margin="153,14,231,240" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}">
+        </TextBox>
+        <TextBox Name="UnrealizedBlance_Box" FontFamily="Segoe Print" IsReadOnly="True" Margin="153,45,231,204" Background="{x:Null}" BorderBrush="{x:Null}">
+        </TextBox>
+
+        <TextBox Name="Portfolio_Box" IsReadOnly="True" Margin="10,116,10,62" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="10" FontFamily="Segoe Print">
+        </TextBox>
+        <Label Content="Date               Time         Symbol    Price        IBought     Earn     Shares" Margin="10,81,-10,155" FontSize="12" FontFamily="Segoe Print"/>
+        <Button Content="Read log file" Click="Read_log_file_Clicked" Style="{StaticResource buttonStyle}" Margin="380,24,39,230" Width="Auto" Height="Auto"/>
+    </Grid>
+</Window>

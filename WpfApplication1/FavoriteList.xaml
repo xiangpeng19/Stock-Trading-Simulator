@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApplication1.FavoriteList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Favorite List" Height="434" Width="365">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FFEEEEEE" Offset="1"/>
+                <GradientStop Color="#FFE43939" Offset="0.167"/>
+                <GradientStop Color="#FFFFD800" Offset="0.5"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Button Margin="50,347,202,12" Content="Add Company" Style="{StaticResource buttonStyle}" Click="AddCompany_Clicked" Height="Auto" Width="Auto">
+        </Button>
+        <Button Margin="205,349,37,12"  Style="{StaticResource buttonStyle}" Content="Delete Company" Click="DeleteCompany_Clicked" Height="Auto" Width="Auto">
+        </Button>
+        <DataGrid x:Name="FavoriteList1" AutoGenerateColumns="False" Margin="0,0,0,83" IsReadOnly="True" IsSynchronizedWithCurrentItem="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" FontSize="12" Header="Symbol" Binding="{Binding symbol}"/>
+                <DataGridTextColumn Width="120" Header="Company Name" FontSize="12"  Binding="{Binding company_name}"/>
+                <DataGridTextColumn Width="*" Header="Price" FontSize="12"  Binding="{Binding price}"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

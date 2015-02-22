@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApplication1.BuyStock"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BuyStock" Height="191.044" Width="492.538">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FFEEEEEE" Offset="1"/>
+                <GradientStop Color="#FFE43939" Offset="0.167"/>
+                <GradientStop Color="#FFFFD800" Offset="0.5"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="How many shares would you like to buy?" FontFamily="Segoe Print" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" Width="275" Height="52"/>
+        
+        <TextBox HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" Text="Enter number of shares" VerticalAlignment="Top" Width="157" Margin="290,38,0,0" Name="tbShares"
+                 GotFocus="Shares_Box_OnFocus" TextChanged="Shares_TextChanged"/>
+        <Button Content="Purchase Stock" Style="{StaticResource buttonStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="106" Margin="94,86,0,0" Height="29" Click="Purchase_Stock_Clicked"/>
+        <Button Content="Cancel" Style="{StaticResource buttonStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Margin="290,87,0,0" Click="Cancel_Clicked" Height="28" RenderTransformOrigin="0.5,0.5"/>
+
+    </Grid>
+</Window>
